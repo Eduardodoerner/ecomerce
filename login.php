@@ -1,5 +1,5 @@
 <form method="post">
-    Login: <br>
+    Login: <br> 
     <input type="text" name="login" placeholder="e-mail">
     <br>
     Senha:<br>
