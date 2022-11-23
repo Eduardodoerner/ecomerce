@@ -7,7 +7,7 @@ while ($categoria = $sql_prepara->fetch()) {
     if (!empty($categoria['categoria_pai'])) {
         $identacao = '&nbsp;&nbsp;&nbsp;';
     } else {
-        $identacao = '';
+        $identacao = ''; 
     }
     echo "{$identacao}<a href=\"?pagina=produtos&categoria={$categoria['id']}\" class=\"btn btn-link\">{$categoria['descricao']}</a><br>";
 }
