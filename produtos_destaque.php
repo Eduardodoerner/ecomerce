@@ -8,7 +8,7 @@
         ORDER BY RAND()
         LIMIT 4
     ';
-    $sql_produtos_destaque = $conn->prepare($sql_produtos_destaque);
+    $sql_produtos_destaque = $conn->prepare($sql_produtos_destaque); 
     $sql_produtos_destaque->execute(['categoria_id' => $_GET['categoria']]);
 } else {
     $sql_produtos_destaque = '
