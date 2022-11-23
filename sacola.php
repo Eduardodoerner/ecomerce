@@ -14,16 +14,6 @@ if (isset($_SESSION['sacola'])) { ?>
         </tr>
     </thead>
     <tbody>
-        <?php
-        $chaves = array_keys($_SESSION['sacola']);
-        foreach ($chaves as $item) {
-
-            //select produto
-            $sql_produto = 'SELECT * from produtos where id = :id';
-            $produto = $conn->prepare($sql_produto);
-            $produto->execute(['id' => $_SESSION['sacola'][$item]]);
-            $produto = $produto->fetch();
-            ?>
         <tr>
             <th scope="row"><?php echo $produto['id']; ?></th>
             <td><?php echo $produto['descricao']; ?></td>
@@ -35,10 +25,6 @@ if (isset($_SESSION['sacola'])) { ?>
                 </form>
             </td>
         </tr>
-        <?php
-        }
-        ?>
-
     </tbody>
 </table>
 
