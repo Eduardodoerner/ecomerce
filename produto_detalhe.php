@@ -22,4 +22,4 @@ $produto_detalhes = $produto->fetch();
         </p>
         <p class="card-text"><small class="text-muted"><?php echo $produto_detalhes['caracteristicas']; ?></small></p>
     </div>
-</div>
+</div> 
