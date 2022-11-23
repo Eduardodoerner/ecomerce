@@ -6,4 +6,4 @@
     <input type="password" name="senha">
     <br>
     <input type="submit" name="autenticar" value="Logar">
-</form>
+</for>
