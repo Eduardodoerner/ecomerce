@@ -57,5 +57,5 @@ include 'home.php';
 if (isset($_SESSION['debug'])) {
     if ($_SESSION['debug'] == true) {
         include 'lib/debug.php';
-    }
+    } 
 }
