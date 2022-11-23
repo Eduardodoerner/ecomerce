@@ -17,7 +17,7 @@ if (empty($linha_categoria['categoria_pai'])) {
     $consulta_produtos->execute(['id' => $_GET['categoria']]);
 
     while ($produto = $consulta_produtos->fetch()) { ?>
-    <div class="card" style="width: 18rem;">
+    <div class="card" style="width: 18rem;"> 
         <img src="imagens/<?php echo $produto['imagem']; ?>" class="card-img-top" alt="<?php echo $produto[
     'descricao'
 ]; ?>">
