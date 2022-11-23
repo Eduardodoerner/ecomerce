@@ -5,7 +5,7 @@ $sql_pedidos = 'select * from vendas where usuario_id = :usuario_id';
 $sql_pedidos = $conn->prepare($sql_pedidos);
 $sql_pedidos->execute(['usuario_id' => $_SESSION['usuario']['id']]);
 
-while ($linha = $sql_pedidos->fetch()) {
+while ($linha = $sql_pedidos->fetch()) { 
 
     echo "<h5>#{$linha['id']} - {$linha['data_venda']}</h5>";
 
