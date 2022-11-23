@@ -31,7 +31,3 @@
 <form method="post">
     <input class="btn btn-success" type="submit" name="gravar_pedido" value="Confirmar!">
 </form>
-
-<?php
-}
-?>
