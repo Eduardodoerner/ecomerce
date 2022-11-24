@@ -1,7 +1,7 @@
 <?php
-if (isset($_SESSION['Carrinho'])) { ?>
+if (isset($_SESSION['sacola'])) { ?>
 <form method="post">
-    <input class="btn btn-danger" type="submit" name="limpar_carrinho" value="Limpar carrinho">
+    <input class="btn btn-danger" type="submit" name="limpar_sacola" value="Limpar">
 </form>
 <hr>
 <table class="table table-striped">
@@ -14,6 +14,14 @@ if (isset($_SESSION['Carrinho'])) { ?>
         </tr>
     </thead>
     <tbody>
+        <?php
+        $chaves = array_keys($_SESSION['sacola']);
+        foreach ($chaves as $item) {
+            $sql_produto = 'SELECT * from produtos where id = :id';
+            $produto = $conn->prepare($sql_produto);
+            $produto->execute(['id' => $_SESSION['sacola'][$item]]);
+            $produto = $produto->fetch();
+        ?>
         <tr>
             <th scope="row"><?php echo $produto['id']; ?></th>
             <td><?php echo $produto['descricao']; ?></td>
@@ -21,15 +29,15 @@ if (isset($_SESSION['Carrinho'])) { ?>
             <td>
                 <form method="POST">
                     <input type="hidden" name="produto" value="<?php echo $item; ?>">
-                    <input class="btn btn-danger" type="submit" name="remover_sacola" value="Cancelar">
+                    <input class="btn btn-danger" type="submit" name="remover_item" value="Remover">
                 </form>
             </td>
         </tr>
+        <?php
+        }
+        ?>
     </tbody>
 </table>
-
-<a class="btn btn-primary" href="?pagina=realizar_pedido">finalizar pedido</a>
-
-
-<?php } else {echo '<h3>Você ainda não tem produtos na Sacola!';}
+<a class="btn btn-primary" href="?pagina=realizar_pedido">Realizar pedido</a>
+<?php } else {echo '<h3>Nenhum produto adicinado ao carrinho!';}
 ?>
