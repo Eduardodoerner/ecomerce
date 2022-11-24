@@ -8,7 +8,7 @@
         ORDER BY RAND()
         LIMIT 4
     ';
-    $sql_produtos_destaque = $conn->prepare($sql_produtos_destaque); 
+    $sql_produtos_destaque = $conn->prepare($sql_produtos_destaque);
     $sql_produtos_destaque->execute(['categoria_id' => $_GET['categoria']]);
 } else {
     $sql_produtos_destaque = '
@@ -29,7 +29,7 @@
         <div class="card-body">
             <h5 class="card-title"><?php echo $produto['descricao']; ?></h5>
             <p class="card-text"><?php echo $produto['resumo']; ?></p>
-            <a href="?pagina=produto&id=<?php echo $produto['id']; ?>" class="btn btn-primary">Detalhes</a>
+            <a href="?pagina=produto&id=<?php echo $produto['id']; ?>" class="btn btn-primary">mais</a>
         </div>
     </div>
     <?php } ?>
