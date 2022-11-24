@@ -29,30 +29,6 @@ if (isset($_POST['remover_sacola'])) {
 }
 
 include 'home.php';
-// if (isset($_SESSION['autenticado'])) {
-//     if (isset($_GET['pagina'])) {
-//         //buscar no banco de dados se a página requisitada existe
-//         $sql = "SELECT *
-//                     FROM paginas
-//                     WHERE id = :id
-//             ";
-//         $consulta = $conn->prepare($sql);
-//         $consulta->execute(['id' => $_GET['pagina']]);
-//         $linha = $consulta->fetch();
-//         if ($consulta->rowCount() > 0) {
-//             include 'menu.php';
-//             include $linha['src'];
-//         } else {
-//             include 'menu.php';
-//             include '404.php';
-//         }
-//     } else {
-//         include 'menu.php';
-//         include 'home.php';
-//     }
-// } else {
-//     include 'login.php';
-// }
 
 if (isset($_SESSION['debug'])) {
     if ($_SESSION['debug'] == true) {
