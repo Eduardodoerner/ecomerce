@@ -12,7 +12,7 @@
     <body>
         <div class="container">
             <div class="row">
-                <div class="col">Banner</div>
+                <div class="col">Capa</div>
             </div>
             <div class="row">
                 <div class="col">
@@ -50,7 +50,7 @@
                 </div>
             </div>
             <div class="row" style="background-color: #ccc;">
-                @meu commerce 2022
+                seu commerce 2022
             </div>
         </div>
 
