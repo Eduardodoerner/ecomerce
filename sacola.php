@@ -41,3 +41,4 @@ if (isset($_SESSION['sacola'])) { ?>
 <a class="btn btn-primary" href="?pagina=realizar_pedido">Realizar pedido</a>
 <?php } else {echo '<h3>Nenhum produto adicinado ao carrinho!';}
 ?>
+// botao de remover no item não esta funcionando//
